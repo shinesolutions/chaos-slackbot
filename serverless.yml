@@ -1,0 +1,19 @@
+service: chaos-slackbot
+
+provider:
+  name: aws
+  runtime: python2.7
+  stage: ${opt:stage}
+  region: ${opt:region}
+
+package:
+ include:
+   - chaosslackbot/
+
+functions:
+  hello:
+    handler: chaosslackbot/handler.handle
+    events:
+      - http:
+          path: handle
+          method: get
