@@ -8,6 +8,7 @@ provider:
 
 package:
  include:
+   - conf/
    - lib/
 
 functions:
