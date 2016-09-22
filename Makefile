@@ -11,4 +11,7 @@ deploy:
 remove:
 	serverless remove --stage $(STAGE) --region us-east-1
 
-.PHONY: deps deploy remove
+start:
+	serverless offline --stage $(STAGE) --region us-east-1
+
+.PHONY: deps deploy remove start
