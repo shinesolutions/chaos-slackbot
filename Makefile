@@ -3,7 +3,7 @@ ifndef STAGE
 endif
 
 deps:
-	pip install -r requirements.txt
+	npm install .
 
 deploy:
 	serverless deploy --stage $(STAGE) --region us-east-1

@@ -2,18 +2,22 @@ service: chaos-slackbot
 
 provider:
   name: aws
-  runtime: python2.7
+  runtime: nodejs4.3
   stage: ${opt:stage}
   region: ${opt:region}
 
 package:
  include:
-   - chaosslackbot/
+   - lib/
 
 functions:
-  hello:
-    handler: chaosslackbot/handler.handle
+  handle:
+    handler: lib/lambda.handle
+    timeout: 90
     events:
       - http:
           path: handle
-          method: get
+          method: post
+
+plugins:
+  - serverless-offline

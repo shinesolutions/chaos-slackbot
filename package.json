@@ -1,0 +1,36 @@
+{
+  "name": "chaos-slackbot",
+  "description": "",
+  "keywords": [],
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "http://github.com/shinesolutions/chaos-slackbot",
+  "author": "Shine Solutions <opensource@shinesolutions.com> (http://shinesolutions.com)",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/shinesolutions/chaos-slackbot.git"
+  },
+  "bugs": {
+    "url": "http://github.com/shinesolutions/chaos-slackbot/issues"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.6.4",
+    "speakeasy-nlp": "^0.2.2"
+  },
+  "devDependencies": {
+    "serverless-offline": "git+https://github.com/dherault/serverless-offline.git/#serverless_v1"
+  },
+  "scripts": {},
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "licenses": [
+    {
+      "type": "APACHE 2.0",
+      "url": "http://github.com/shinesolutions/chaos-slackbot/raw/master/LICENSE"
+    }
+  ]
+}
