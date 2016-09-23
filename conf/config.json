@@ -1,4 +1,6 @@
 {
   "allowedTokens": [],
-  "mode": "sentiment"
+  "mode": "sentiment",
+  "ignoredUserNames": ["slackbot"],
+  "simpleDBDomainName": "CHAOS_SLACKBOT_TEST"
 }
