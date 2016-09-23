@@ -5,6 +5,11 @@ provider:
   runtime: nodejs4.3
   stage: ${opt:stage}
   region: ${opt:region}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "sdb:*"
+      Resource: "*"
 
 package:
  include:
@@ -19,6 +24,13 @@ functions:
       - http:
           path: handle
           method: post
+
+resources:
+  Resources:
+    chaosSDB:
+      Type: AWS::SDB::Domain
+      Properties:
+        Description: sdb
 
 plugins:
   - serverless-offline
