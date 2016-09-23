@@ -9,6 +9,8 @@ provider:
     - Effect: "Allow"
       Action:
         - "sdb:*"
+        - "ec2:*"
+        - "autoscaling:*"
       Resource: "*"
 
 package:
