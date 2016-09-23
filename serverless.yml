@@ -5,6 +5,11 @@ provider:
   runtime: nodejs4.3
   stage: ${opt:stage}
   region: ${opt:region}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "sdb:*"
+      Resource: "*"
 
 package:
  include:
