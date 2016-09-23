@@ -20,5 +20,12 @@ functions:
           path: handle
           method: post
 
+resources:
+  Resources:
+    chaosSDB:
+      Type: AWS::SDB::Domain
+      Properties:
+        Description: sdb
+
 plugins:
   - serverless-offline
