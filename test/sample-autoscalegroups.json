@@ -1,0 +1,86 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "The AWS CloudFormation template for this Serverless application",
+    "Parameters": {
+        "pVPCid": {
+            "Default": "vpc-0443d961",
+            "Description": "VPC ID",
+            "Type": "AWS::EC2::VPC::Id"
+        },
+        "pAMIPeon": {
+            "Default": "ami-6869aa05",
+            "Description": "EC2 Instance AMI",
+            "Type": "String"
+        },
+        "pKeyName": {
+            "Default": "sp-slackbot",
+            "Description": "KeyName",
+            "Type": "String"
+        },
+
+        "pSecGrpDefault": {
+            "Default": "sg-8b08f1ef",
+            "Description": "Security Group Default",
+            "Type": "String"
+        },
+
+        "pSubnetB": {
+            "Description": "Subnet B",
+            "Type": "String",
+            "Default": "subnet-54fd3f7f"
+        },
+        "pSubnetC": {
+            "Description": "Subnet C",
+            "Type": "String",
+            "Default": "subnet-dc9214ab"
+        },
+
+    		"pAvailZones" : {
+    			"Default" : "us-east-1b,us-east-1c",
+    			"Description" : "The list of AvailabilityZones for your Virtual Private Cloud (VPC). It needs to be consistent with the AZ of your subnets.",
+    			"Type" : "CommaDelimitedList"
+    		}
+
+    },
+    "Resources": {
+
+
+        "rPeonLaunchCfg": {
+            "Type": "AWS::AutoScaling::LaunchConfiguration",
+            "Properties": {
+				        "AssociatePublicIpAddress" : false,
+                "ImageId": { "Ref": "pAMIPeon" },
+				        "InstanceMonitoring": true,
+                "InstanceType": "t2.micro",
+                "KeyName": { "Ref": "pKeyName" },
+                "SecurityGroups": [ { "Ref": "pSecGrpDefault" } ],
+        				"UserData": {
+        					"Fn::Base64": {
+        						"Fn::Join":	[ "",
+        										[
+        											"#!/bin/bash -x\n",
+                              "su - ec2-user -c \" echo 'Hello World!!'\""
+        										]
+        						]
+        					}
+        				}
+            }
+        },
+
+        "rPeonASG": {
+            "Type": "AWS::AutoScaling::AutoScalingGroup",
+            "Properties": {
+                "AvailabilityZones": { "Ref": "pAvailZones" },
+                "VPCZoneIdentifier": [ { "Ref" : "pSubnetB" }, { "Ref" : "pSubnetC" } ],
+                "LaunchConfigurationName": { "Ref": "rPeonLaunchCfg" },
+                "MinSize": "2",
+                "MaxSize": "2",
+				        "Tags": [
+				              { "PropagateAtLaunch": true, "Key": "Name",			"Value": "peon-host" }
+				        ]
+            }
+        }
+
+
+    }
+}
