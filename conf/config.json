@@ -4,7 +4,8 @@
   "ignoredUserNames": ["slackbot"],
   "simpleDBDomainName": "CHAOS_SLACKBOT_TEST",
   "timezone": "Australia/Melbourne",
-  "terminationLimit" : "50",
+  "terminationLimit" : "10",
   "controlledStartHour" : "10",
-  "controlledEndHour" : "16"
+  "controlledEndHour" : "16",
+  "autoScalingGroupNames" : ["peon-group-a-prod-rPeonASG-LY0BQGSGGD2J", "peon-group-b-prod-rPeonASG-1VMETZGIPAP22", "peon-group-c-prod-rPeonASG-125LGTXSU9G3D"]
 }
