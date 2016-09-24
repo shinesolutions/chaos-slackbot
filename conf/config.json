@@ -3,5 +3,6 @@
   "mode": "sentiment",
   "ignoredUserNames": ["slackbot"],
   "simpleDBDomainName": "CHAOS_SLACKBOT_TEST",
-  "timezone": "Australia/Melbourne"
+  "timezone": "Australia/Melbourne",
+  "terminationLimit" : "50"
 }
