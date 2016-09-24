@@ -4,5 +4,7 @@
   "ignoredUserNames": ["slackbot"],
   "simpleDBDomainName": "CHAOS_SLACKBOT_TEST",
   "timezone": "Australia/Melbourne",
-  "terminationLimit" : "50"
+  "terminationLimit" : "50",
+  "controlledStartHour" : "10",
+  "controlledEndHour" : "16"
 }
