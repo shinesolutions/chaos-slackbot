@@ -29,7 +29,9 @@ Specify custom stage:
 
     STAGE=dev make deps deploy remove
 
-Credits
--------
+Colophon
+--------
+
+This project is a submission to [AWS Serverless Chatbot Competition 2016](https://awschatbot.devpost.com/).
 
 Chaos Slackbot astro monkey icon made by [Madebyoliver](http://www.flaticon.com/authors/madebyoliver) from [www.flaticon.com](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
