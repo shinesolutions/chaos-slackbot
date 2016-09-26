@@ -2,7 +2,7 @@
   "allowedTokens": [],
   "mode": "sentiment",
   "ignoredUserNames": ["slackbot"],
-  "simpleDBDomainName": "CHAOS_SLACKBOT_TEST",
+  "simpleDBDomainName": "chaos_slackbot",
   "timezone": "Australia/Melbourne",
   "terminationLimit" : "10",
   "controlledStartHour" : "10",
