@@ -42,7 +42,7 @@ Let's install the bot first by creating a Slack outgoing webhook custom integrat
     - **Token**: Slack will generate the token for you, this token will be configured in Lambda function.
     - **Descriptive Label**: description for this custom integration, e.g. **Chaos Outgoing WebHook**
     - **Customize Name**: the name of your bot, e.g. **Chaos**
-    - **Customize Icon**: upload SiteChecker [radar icon](https://raw.githubusercontent.com/shinesolutions/chaos-slackbot/master/icon.png)
+    - **Customize Icon**: upload Chaos [astro monkey icon](https://raw.githubusercontent.com/shinesolutions/chaos-slackbot/master/icon.png)
 6. Click **Save Settings** button.
 
 Next, the second part is to create the infrastructure on AWS.
