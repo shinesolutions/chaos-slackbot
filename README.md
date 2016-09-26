@@ -9,7 +9,7 @@ Chaos is a [serverless](http://martinfowler.com/articles/serverless.html) [Slack
 
 It's inspired by [Chaos Monkey](https://github.com/Netflix/SimianArmy/wiki/Chaos-Monkey), but the randomness is determined by what the chatters are talking about on a Slack channel. The bot wouldn't know up front what the humans will be saying and when they will say it, that's natural randomness we're taking advantage of.
 
-Here's an example of a conversation between Bruce Wayne and Tony Stark chatting on a Slack channel, which messages are analysed by Chaos bot, and used to determine whether to terminate a random EC2 instance.
+Here's an example of a conversation between Bruce Wayne and Tony Stark on a Slack channel, which messages are analysed by Chaos bot, and are used to determine whether to terminate a random EC2 instance.
 
 [![Sample Interaction Screenshot](https://raw.github.com/shinesolutions/chaos-slackbot/master/docs/sample_interaction.jpg)](https://raw.github.com/shinesolutions/chaos-slackbot/master/docs/sample_interaction.jpg)
 
