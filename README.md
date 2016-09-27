@@ -53,8 +53,9 @@ Next, the second part is to create the infrastructure on AWS.
 2. Set up [AWS credential](https://serverless.com/framework/docs/providers/aws/setup/), to be used by [Serverless framework](https://serverless.com/).
 3. Clone the repository: `git clone https://github.com/shinesolutions/chaos-slackbot` .
 4. Configure the Slack token from the outgoing webhook custom integration settings in `conf/config.json` . Add the token to `allowedTokens` array property.
-5. Install tools and dependencies: `make tools deps` .
-6. Build the Lambda function and API Gateway: `make deploy` . The output of this command will show a POST endpoint, e.g. `https://id.execute-api.us-east-1.amazonaws.com/prod/handle`
+5. Configure the Auto Scaling Group names in `conf/config.json` to `autoScalingGroupNames` array property.
+6. Install tools and dependencies: `make tools deps` .
+7. Build the Lambda function and API Gateway: `make deploy` . The output of this command will show a POST endpoint, e.g. `https://id.execute-api.us-east-1.amazonaws.com/prod/handle`
 8. Return to the Slack Outgoing WebHook custom integration settings page, and copy paste the POST endpoint from the command output to **URL(s)** setting, then click **Save Settings** button.
 
 Usage
