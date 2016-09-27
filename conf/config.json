@@ -7,5 +7,5 @@
   "terminationLimit" : "10",
   "controlledStartHour" : "10",
   "controlledEndHour" : "16",
-  "autoScalingGroupNames" : ["peon-group-a-prod-rPeonASG-LY0BQGSGGD2J", "peon-group-b-prod-rPeonASG-1VMETZGIPAP22", "peon-group-c-prod-rPeonASG-125LGTXSU9G3D"]
+  "autoScalingGroupNames" : ["ASG_NAME_1", "ASG_NAME_2", "ASG_NAME_3"]
 }
