@@ -72,11 +72,11 @@ Chaos Slack bot Lambda function can be configured in [conf/config.json](https://
 |-----------------------|-------------|
 | allowedTokens         | An array of allowed Slack tokens. If any is specified, then only incoming requests with that token are accepted. If left empty, then all incoming requests are accepted. |
 | mode                  | Chaos mode to determine message processing rule, currently only supports `sentiment` . |
-| ignoredUserNames      | An array of Slack usernames to be ignored. |
-| controlledStartHour   | Start hour of the day when Chaos bot is allowed to terminate EC2 instance. Valid value: 1 to 24. |
-| controlledEndHour     | End hour of the day when Chaos bot is no longer allowed to terminate EC2 instance. Valid value: 1 to 24. |
+| ignoredUserNames      | An array of Slack usernames to be ignored, at the very least you want to ignore `slackbot` . |
+| controlledStartHour   | Start hour of the day when Chaos bot is allowed to terminate EC2 instance. Valid value: 0 to 24. |
+| controlledEndHour     | End hour of the day when Chaos bot is no longer allowed to terminate EC2 instance. Valid value: 0 to 24. |
 | timezone              | Timezone for controlledStartHour and controlledEndHour. Use [Moment Timezone](http://momentjs.com/timezone/) to find valid timezone values. |
-| terminationLimit      | Maximum number of EC2 instances that can be terminated per day. |
+| terminationLimit      | The number of message hits before Chaos terminates a random EC2 instance. The specified mode determines how a message hit is calculated. |
 | autoScalingGroupNames | An array of whitelisted Auto Scaling Group names. EC2 instances that belong to these Auto Scaling Groups are candidates for termination. |
 | simpleDBDomainName    | The name of SimpleDB database domain. |
 
