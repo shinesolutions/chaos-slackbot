@@ -1,7 +1,7 @@
 {
   "name": "chaos-slackbot",
-  "description": "",
-  "keywords": [],
+  "description": "Serverless Slack bot for randomly terminating EC2 instance from Auto Scaling Groups whitelist",
+  "keywords": ["serverless", "slack", "bot", "aws", "lambda", "chaos", "ec2"],
   "version": "0.0.1",
   "private": true,
   "homepage": "http://github.com/shinesolutions/chaos-slackbot",
