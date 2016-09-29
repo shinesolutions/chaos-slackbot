@@ -111,5 +111,4 @@ Chaos Slackbot astro monkey icon made by [Madebyoliver](http://www.flaticon.com/
 
 [Demo video](https://www.youtube.com/watch?v=q5w5VX4tAD4) background music [Epic and Dark Electronic Music - Welcome to Chaos (Copyright and Royalty Free) by Ross Bugden](https://www.youtube.com/watch?v=q5w5VX4tAD4).
 
-
-This project is a submission to [AWS Serverless Chatbot Hackathon 2016](https://awschatbot.devpost.com/).
+This project is a submission to [AWS Serverless Chatbot Hackathon 2016](https://awschatbot.devpost.com/) - with self-imposed 24-hour total time limit scattered across several days/nights.
