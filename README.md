@@ -109,4 +109,7 @@ Colophon
 
 Chaos Slackbot astro monkey icon made by [Madebyoliver](http://www.flaticon.com/authors/madebyoliver) from [www.flaticon.com](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
 
+[Demo video](https://www.youtube.com/watch?v=q5w5VX4tAD4) background music [Epic and Dark Electronic Music - Welcome to Chaos (Copyright and Royalty Free) by Ross Bugden](https://www.youtube.com/watch?v=q5w5VX4tAD4).
+
+
 This project is a submission to [AWS Serverless Chatbot Hackathon 2016](https://awschatbot.devpost.com/).
